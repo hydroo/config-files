@@ -43,8 +43,6 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" safe as soon as vim looses the focus
-au FocusLost * :wa
 
 " ''' old stuff '''
 
