@@ -13,6 +13,7 @@ set mouse=a
 nnoremap / /\v
 vnoremap / /\v
 
+" use more colors than just 16
 set t_Co=256
 
 " disable modelines for security reasons
@@ -45,9 +46,7 @@ vnoremap <F1> <ESC>
 " safe as soon as vim looses the focus
 au FocusLost * :wa
 
-
-
-" old stuff
+" ''' old stuff '''
 
 colorscheme default
 
