@@ -6,8 +6,6 @@ set nocompatible
 map <up> g<up>
 map <down> g<down>
 
-" enable mouse use in all modes
-set mouse=a
 
 " do not use vim's own regex magic value scheme when searching
 nnoremap / /\v
