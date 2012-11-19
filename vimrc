@@ -175,11 +175,14 @@ endfunction
 " ∃ TE
 " ◇ Dw
 " ○ 0m
+" ␣ Vs
 " □ OS
 " ■ fS
 " ¬ NO
 " Ø O/
 " ø o/
+dig -T 8868 " ⊤ new
+dig _T 8869 " ⊥ new remapped from -T
 " ⊥ -T
 " ∈ (-
 " ∋ -)
@@ -197,6 +200,9 @@ endfunction
 " √ RT
 " ∘ Ob
 " ∙ Sb
+dig o+ 8853 " ⊕ new
+dig o- 8854 " ⊖ new
+dig ox 8855 " ⊗ new
 " ⊙ 0.
 " ⊚ 02
 " ≃ ?- asymptotically equal to
@@ -208,10 +214,27 @@ endfunction
 " ≥ >= greater-than or equal to
 " ≪ <* much less-than
 " ≫ *> much greater-than
+"
+" ⌈ <7 LEFT CEILING
+" ⌉ >7 RIGHT CEILING
+" ⌊ 7< LEFT FLOOR
+" ⌋ 7> RIGHT FLOOR
+" 《<+ LEFT DOUBLE ANGLE BRACKET
+" 》>+ RIGHT DOUBLE ANGLE BRACKET
+" 〔(' LEFT TORTOISE SHELL BRACKET
+" 〕)' RIGHT TORTOISE SHELL BRACKET
+" 〉</ left-pointing angle bracket " buggy brackets!
+" 〈 >/ right-pointing angle bracket " buggy brackets!
 " 
 " -- other symbols --
 " ✓ OK
 " ✗ XX
+"
+dig NN 8469 " ℕ new
+dig QQ 8474 " ℚ new
+dig ZZ 8484 " ℤ new
+dig RR 8477 " ℝ new
+dig CC 8450 " ℂ new
 " 
 " -- superscript --
 " ⁰ 0S superscript 0-9
@@ -240,7 +263,37 @@ endfunction
 " ⇐ <=
 " ⇒ =>
 " ⇔ ==
-" 
+"
+" -- calligraphic letters
+"
+" 𝓐-𝓩 MA - MZ new (unicode 1D4D0 ff)
+dig MA 120016
+dig MB 120017
+dig MC 120018
+dig MD 120019
+dig ME 120020
+dig MF 120021
+dig MG 120022
+dig MH 120023
+dig MI 120024
+dig MJ 120025
+dig MK 120026
+dig ML 120027
+dig MM 120028
+dig MN 120029
+dig MO 120030
+dig MP 120031
+dig MQ 120032
+dig MR 120033
+dig MS 120034
+dig MT 120035
+dig MU 120036
+dig MV 120037
+dig MW 120038
+dig MX 120039
+dig MY 120040
+dig MZ 120041
+"
 " -- greek letters --
 " Γ G* capital gamma
 " Δ D* capital delta
@@ -275,7 +328,10 @@ endfunction
 " χ x* small chi
 " ψ q* small psi
 " ω w* small omega
-" 
+"
+" -- hebrew --
+" א A+ alef
+"
 " -- roman numerals --
 " Ⅰ 1R one
 " Ⅱ 2R two
