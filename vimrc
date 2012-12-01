@@ -88,8 +88,8 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.[pns]m set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.smg set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.pctl set filetype=prismproperty
-	autocmd FileType prismmodel setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType prismproperty setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+	autocmd FileType prismmodel setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType prismproperty setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 	autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType scheme setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
