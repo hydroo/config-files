@@ -96,6 +96,7 @@ if has("autocmd")
 	autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 	autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType promela setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 	" doesnt work properly -- revise me
