@@ -98,6 +98,7 @@ if has("autocmd")
 	autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 	autocmd FileType promela setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType tex set spell
 
 	" doesnt work properly -- revise me
 	autocmd CursorMoved * call RonnyHighlightWordUnderCursor()
