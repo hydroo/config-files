@@ -92,7 +92,7 @@ if has("autocmd")
 	autocmd FileType prismproperty setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 	autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType scheme setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+	autocmd FileType scheme setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 	autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 	autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
