@@ -86,6 +86,7 @@ match Todo /@todo/ "highlight doxygen todos
 if has("autocmd")
 
 	autocmd BufRead,BufNewFile *.[pns]m set filetype=prismmodel
+	autocmd BufRead,BufNewFile *.prism set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.smg set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.pctl set filetype=prismproperty
 	autocmd FileType prismmodel setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
