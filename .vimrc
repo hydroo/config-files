@@ -79,7 +79,7 @@ highlight MatchParen cterm=bold
 set list
 
 
-match Todo /@todo/ "highlight doxygen todos
+2match Todo /\(@todo\|\ccitation needed\)/
 
 
 "different tabbing settings for different file types
