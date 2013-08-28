@@ -79,7 +79,7 @@ highlight MatchParen cterm=bold
 set list
 
 
-2match Todo /\(@todo\|\ccitation needed\)/
+2match Todo /\(@todo\|\ccitation\( \|\)needed\)/
 
 
 "different tabbing settings for different file types
