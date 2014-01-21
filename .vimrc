@@ -80,6 +80,10 @@ set list
 
 2match Todo /\(TODO\|\ctodo\|@todo\|\ccitation\( \|\)needed\)/
 
+set exrc
+set secure
+
+
 "different tabbing settings for different file types
 if has("autocmd")
 
