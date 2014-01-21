@@ -78,7 +78,7 @@ highlight clear MatchParen
 highlight MatchParen cterm=bold
 set list
 
-2match Todo /\(\ctodo\|@todo\|\ccitation\( \|\)needed\)/
+2match Todo /\(TODO\|\ctodo\|@todo\|\ccitation\( \|\)needed\)/
 
 "different tabbing settings for different file types
 if has("autocmd")
