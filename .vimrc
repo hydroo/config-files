@@ -78,9 +78,7 @@ highlight clear MatchParen
 highlight MatchParen cterm=bold
 set list
 
-
 2match Todo /\(\ctodo\|@todo\|\ccitation\( \|\)needed\)/
-
 
 "different tabbing settings for different file types
 if has("autocmd")
@@ -110,11 +108,9 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.go set filetype=go
 endif
 
-
 highlight Search ctermfg=white ctermbg=gray
 highlight IncSearch ctermfg=white ctermbg=gray
 highlight RonnyWordUnderCursorHighlight cterm=bold
-
 
 function! RonnyHighlightWordUnderCursor()
 python << endpython
@@ -368,4 +364,3 @@ dig MZ 120041
 " ⅹ ar small ten
 " ⅺ br small eleven
 " ⅻ cr small twelve
-" 
