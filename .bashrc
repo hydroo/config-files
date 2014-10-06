@@ -1,1 +1,0 @@
-/home/brendel/.bashrc
