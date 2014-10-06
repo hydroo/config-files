@@ -1,8 +1,0 @@
-[ui]
-username = Ronny Brendel <ronny.brendel@tu-dresden.de>
-
-[extensions]
-record=
-color=
-hgext.bookmarks =
-hggit =
