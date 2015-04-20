@@ -72,8 +72,12 @@ alias ls='ls $LS_OPTIONS'
 alias ll='ls -l'
 alias l='ls -la'
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/opt/papi/lib
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib:/opt/papi/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/papi/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cube/lib
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/papi/lib
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/cube/lib
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/opt/mrmc/bin
 export PATH=$PATH:/opt/prism/bin
@@ -83,7 +87,9 @@ export PATH=$PATH:/opt/papi/bin
 export PATH=$PATH:/opt/treeviz/bin
 export PATH=$PATH:/opt/vampir/bin
 export PATH=$PATH:/opt/hpctoolkit-viewer/bin
+export PATH=$PATH:/opt/cube/bin
 export INCLUDE=$INCLUDE:/opt/papi/include
+export INCLUDE=$INCLUDE:/opt/cube/include
 export MANPATH=$MANPATH:/opt/papi/share/man:/opt/spin/man
 
 export GOROOT=/home/brendel/work/3rd-party-source/golang
