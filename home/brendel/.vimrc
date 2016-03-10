@@ -120,7 +120,7 @@ highlight IncSearch ctermfg=white ctermbg=gray
 highlight RonnyWordUnderCursorHighlight cterm=bold
 
 function! RonnyHighlightWordUnderCursor()
-python << endpython
+python3 << endpython
 import vim
 
 # get the character under the cursor
@@ -157,7 +157,7 @@ endfunction
 
 
 function! RonnyEscapeString(s)
-python << endpython
+python3 << endpython
 import vim
 
 s = vim.eval("a:s")
