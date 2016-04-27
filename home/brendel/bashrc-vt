@@ -109,6 +109,7 @@ alias grep="grep --color=auto --devices=skip --exclude-dir=CVS --exclude-dir=.li
 export HGUSER="Ronny Brendel <ronnybrendel@gmail.com>"
 export HG="/usr/bin/hg"
 
+export LESS="-R"
 
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
