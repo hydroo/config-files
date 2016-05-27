@@ -117,4 +117,6 @@ export MRMC_HOME_DIR=/opt/mrmc
 #source /opt/intel-composer-XE-2013/advisor_xe/advixe-vars.sh intel64 1> /dev/null
 export INTEL_LICENSE_FILE=/opt/intel-composer-XE-2013/
 
+alias ..="cd .."
+
 tabs 4
