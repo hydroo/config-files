@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=Redshift
-Exec=/home/brendel/work/config-files/redshift-start-script.sh
+Exec=redshift -g 1.1:1.1:0.6 -t 6500:3500
 Icon=redshift
 Terminal=false
 Type=Application
