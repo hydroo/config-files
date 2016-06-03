@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Redshift
+Exec=redshift -t 6500:3500
+Icon=redshift
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=false
+
