@@ -86,13 +86,9 @@ export LIBRARY_PATH=$LIBRARY_PATH:/opt/scalasca/lib
 #export LIBRARY_PATH=$LIBRARY_PATH:/opt/gasnet/lib
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/openshmem/lib
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:/opt/mrmc/bin
-export PATH=$PATH:/opt/prism/bin
-export PATH=$PATH:/opt/spin/bin
 export PATH=$PATH:/opt/sun-java/bin
 export PATH=$PATH:/opt/treeviz/bin
 export PATH=$PATH:/opt/vampir/bin
-export PATH=$PATH:/opt/hpctoolkit-viewer/bin
 export PATH=$PATH:/opt/cube/bin
 export PATH=$PATH:/opt/otf2/bin
 export PATH=$PATH:/opt/opari2/bin
@@ -104,20 +100,6 @@ export INCLUDE=$INCLUDE:/opt/otf2/include
 export INCLUDE=$INCLUDE:/opt/opari2/include
 #export INCLUDE=$INCLUDE:/opt/gasnet/include
 export INCLUDE=$INCLUDE:/opt/openshmem/include
-export MANPATH=$MANPATH:/opt/spin/man
-
-export GOROOT=/home/brendel/work/3rd-party-source/golang
-export GOBIN=/home/brendel/bin
-export GOOS=linux
-export GOARCH=amd64
-export GOMAXPROCS=4
-
-export MRMC_HOME_DIR=/opt/mrmc
-
-#source /opt/intel-composer-XE-2013/bin/compilervars.sh intel64
-#source /opt/intel-composer-XE-2013/inspector_xe/inspxe-vars.sh intel64 1> /dev/null
-#source /opt/intel-composer-XE-2013/advisor_xe/advixe-vars.sh intel64 1> /dev/null
-export INTEL_LICENSE_FILE=/opt/intel-composer-XE-2013/
 
 alias ..="cd .."
 
