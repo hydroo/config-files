@@ -72,6 +72,9 @@ alias ls='ls $LS_OPTIONS'
 alias ll='ls -l'
 alias l='ls -la'
 
+alias ..="cd .."
+alias md="mkdir"
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cube/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/otf2/lib
@@ -100,7 +103,5 @@ export INCLUDE=$INCLUDE:/opt/otf2/include
 export INCLUDE=$INCLUDE:/opt/opari2/include
 #export INCLUDE=$INCLUDE:/opt/gasnet/include
 export INCLUDE=$INCLUDE:/opt/openshmem/include
-
-alias ..="cd .."
 
 tabs 4
