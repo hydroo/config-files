@@ -71,6 +71,7 @@ set laststatus=2
 set visualbell "do not beep
 set tabpagemax=100
 set statusline=%F\ %h%m%r%=%l/%L\ \(%-03p%%\)\ %-03c\ 
+set clipboard^=unnamedplus,unnamed "^= prepend string, yank to both clipboards (and to the previously set one), yank from the ctrl+c clipboard
 
 "use listmode to make tabs visible and make them gray so they are not
 "disctrating too much
