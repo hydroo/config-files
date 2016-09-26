@@ -9,8 +9,8 @@ set nocompatible
 map <up> g<up>
 map <down> g<down>
 
-map <C-I> :py3f ~/.vim/addons/syntax/clang-format.py<CR>
-imap <C-I> <ESC>:py3f ~/.vim/addons/syntax/clang-format.py<CR>i
+map <C-K> :py3f ~/.vim/addons/syntax/clang-format.py<cr>
+imap <C-K> <c-o>:py3f ~/.vim/addons/syntax/clang-format.py<cr>
 
 " do not use vim's own regex magic value scheme when searching
 nnoremap / /\v
