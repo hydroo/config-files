@@ -123,6 +123,7 @@ highlight IncSearch ctermfg=white ctermbg=gray
 highlight RonnyWordUnderCursorHighlight cterm=bold
 
 function! RonnyHighlightWordUnderCursor()
+if has('python3')
 python3 << endpython
 import vim
 
@@ -156,10 +157,12 @@ if characterUnderCursor.isalpha() or characterUnderCursor.isdigit() or character
 		vim.command("match RonnyWordUnderCursorHighlight /" + wordUnderCursor + "/")
 
 endpython
+endif
 endfunction
 
 
 function! RonnyEscapeString(s)
+if has('python3')
 python3 << endpython
 import vim
 
@@ -181,6 +184,7 @@ for before, after in escapeMap.items() :
 
 vim.command("return \'" + s + "\'")
 endpython
+endif
 endfunction
 
 " ''' digraphs '''
