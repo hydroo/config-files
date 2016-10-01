@@ -3,8 +3,6 @@ set encoding=utf-8
 
 set nocompatible
 
-" ### new ###
-
 " be able to move up/down inside wrapped lines
 map <up> g<up>
 map <down> g<down>
@@ -47,8 +45,6 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 
-" ''' old stuff '''
-
 colorscheme default
 
 set backspace=indent,eol,start
@@ -89,6 +85,30 @@ set list
 set exrc
 set secure
 
+" --- folding ---
+set foldmethod=syntax
+
+nnoremap <Space> za
+vnoremap <Space> za
+
+function! MyFoldText()
+    return getline(v:foldstart) . ' '
+endfunction
+set foldtext=MyFoldText()
+
+highlight Folded ctermfg=gray ctermbg=none
+
+" zi toggle folding support
+" zj move to the top of the next fold (even when everything is unfolded)
+" zk move to the bottom of the previous fold
+" za toggle the current fold
+" zA toggle all folds recursively
+" zoO for open, zcC for close
+" zr open one more fold leve
+" zR open all folds
+" zm close one fold level
+" zM close all folds in the document
+" zv expand folds to reveal cursor (zMzv is useful)
 
 "different tabbing settings for different file types
 if has("autocmd")
@@ -121,6 +141,8 @@ endif
 highlight Search ctermfg=white ctermbg=gray
 highlight IncSearch ctermfg=white ctermbg=gray
 highlight RonnyWordUnderCursorHighlight cterm=bold
+
+" --- highlight the word under the cursor ---
 
 function! RonnyHighlightWordUnderCursor()
 if has('python3')
@@ -187,7 +209,7 @@ endpython
 endif
 endfunction
 
-" ''' digraphs '''
+" --- digraphs ---
 "
 " insert mode + ctrl+k + key 1 + key 2
 " 
