@@ -7,3 +7,4 @@
 	helper = cache --timeout=3600
 [gui]
 	tabsize = 4
+	fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
