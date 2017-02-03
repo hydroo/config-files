@@ -28,7 +28,7 @@ set scrolloff=5
 set wildmenu
 set wildmode=list:longest
 
-set visualbell
+set novisualbell " i used to enable this, but it seems to cause a performance problem, and i probably don't want or need it
 
 set ttyfast
 
@@ -66,16 +66,24 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set laststatus=2
-set visualbell "do not beep
 set tabpagemax=100
 set statusline=%F\ %h%m%r%=%l/%L\ \(%-03p%%\)\ %-03c\ 
 set clipboard^=unnamedplus,unnamed "^= prepend string, yank to both clipboards (and to the previously set one), yank from the ctrl+c clipboard
 
+" make gvim similar to the console vim, plus some more settings like lines and columns
+set guicursor+=a:blinkon0 " no blinking
+highlight Cursor guibg=#00c0c1
+highlight iCursor guibg=#00c0c1
+set guifont=FreeMono\ 14
+if has("gui_running")
+	set lines=40 columns=120
+endif
+
 "use listmode to make tabs visible and make them gray so they are not
 "disctrating too much
 set listchars=tab:»\ ,eol:¬,trail:.
-highlight NonText ctermfg=gray guifg=gray
-highlight SpecialKey ctermfg=gray guifg=gray
+highlight NonText ctermfg=gray guifg=lightgray
+highlight SpecialKey ctermfg=gray guifg=lightgray
 highlight clear MatchParen
 highlight MatchParen cterm=bold
 set list
