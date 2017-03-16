@@ -17,6 +17,9 @@ vnoremap / /\v
 " use more colors than just 16
 set t_Co=256
 
+" vim and tmux need to be on the same page about terminal symbols
+set term=xterm-256color
+
 " disable modelines for security reasons
 set modelines=0
 
