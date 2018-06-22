@@ -120,4 +120,4 @@ fi
 export HGUSER="Ronny Brendel <ronnybrendel@gmail.com>"
 export HG="/usr/bin/hg"
 
-alias grep="grep --color=auto --devices=skip --exclude-dir=CVS --exclude-dir=.libs --exclude-dir=.deps --exclude-dir=.svn"
+alias grep="grep --color=auto --devices=skip --exclude-dir=CVS --exclude-dir=.libs --exclude-dir=.deps --exclude-dir=.svn --exclude-dir=.git"
