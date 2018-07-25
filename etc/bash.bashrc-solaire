@@ -89,24 +89,15 @@ function add_app
 }
 
 add_app $HOME
-#add_app /opt/clang
-add_app /opt/cube
 #add_app /opt/gasnet
 add_app /opt/hpctoolkit
 add_app /opt/llvm
 add_app /opt/nvml
-add_app /opt/opari
 #add_app /opt/openshmem
-add_app /opt/otf
-add_app /opt/otf2
 add_app /opt/papi
-add_app /opt/pdtoolkit/x86_64
-add_app /opt/scalasca
-add_app /opt/tau/x86_64
 add_app /opt/vampir
 add_app /usr/local
 
-export TAU_MAKEFILE=/opt/tau/x86_64/lib/Makefile.tau-mpi-pdt-openmp
 
 export SC2PATH=/opt/starcraft2
 
