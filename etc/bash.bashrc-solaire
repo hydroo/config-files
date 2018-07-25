@@ -98,6 +98,7 @@ add_app /opt/papi
 add_app /opt/vampir
 add_app /usr/local
 
+export PATH="/opt/zotero:$PATH"
 
 export SC2PATH=/opt/starcraft2
 
