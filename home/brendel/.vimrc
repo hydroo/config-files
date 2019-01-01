@@ -128,6 +128,8 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.prism set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.smg set filetype=prismmodel
 	autocmd BufRead,BufNewFile *.pctl set filetype=prismproperty
+	autocmd BufRead,BufNewFile *.frag,*.vert,*.fp,*.vp,*.glsl set filetype=glsl
+
 	autocmd FileType prismmodel setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 	autocmd FileType prismproperty setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
