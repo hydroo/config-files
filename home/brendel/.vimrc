@@ -10,7 +10,7 @@ map <down> g<down>
 map <C-K> :py3f ~/.vim/addons/syntax/clang-format.py<cr>
 imap <C-K> <c-o>:py3f ~/.vim/addons/syntax/clang-format.py<cr>
 
-if has("windows")
+if has("win32")
 	noremap <C-΄>  :tabprevious<cr>
 	" noremap <C-Îv> :tabnext<cr> " doesn't work
 	nnoremap tp    :tabprevious<CR>
@@ -22,12 +22,12 @@ nnoremap / /\v
 vnoremap / /\v
 
 " use more colors than just 16
-if !has("windows")
+if !has("win32")
 	" set t_Co=256
 endif
 
 " vim and tmux need to be on the same page about terminal symbols
-if !has("windows")
+if !has("win32")
 	set term=xterm-256color
 endif
 
@@ -96,10 +96,10 @@ endif
 "use listmode to make tabs visible and make them gray so they are not
 "disctrating too much
 set listchars=tab:»\ ,eol:¬,trail:.
-if has("windows") " cmder's theme is dark, so lightgray is bad
+if has("win32") " cmder's theme is dark, so lightgray is bad
 	highlight NonText ctermfg=darkgray guifg=darkgray
 	highlight SpecialKey ctermfg=darkgray guifg=darkgray
-else
+elseif has("X11")
 	highlight NonText ctermfg=gray guifg=lightgray
 	highlight SpecialKey ctermfg=gray guifg=lightgray
 endif
