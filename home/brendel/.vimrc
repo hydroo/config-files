@@ -3,6 +3,8 @@ set encoding=utf-8
 
 set nocompatible
 
+let mapleader=","
+
 " be able to move up/down inside wrapped lines
 map <up> g<up>
 map <down> g<down>
@@ -237,6 +239,23 @@ for before, after in escapeMap.items() :
 vim.command("return \'" + s + "\'")
 endpython
 endif
+endfunction
+
+" search online
+nmap <leader>s :call Duck("")<CR>
+" instantly browse to first search result
+nmap <leader>l :call Duck("\\")<CR>
+function! Duck(prefix)
+	let keyword = expand("<cword>")
+	let url = "https://duckduckgo.com/?q=" . a:prefix . keyword
+	if has("win32")
+		let browser = "TODO add browser path"
+	elseif has("X11")
+		let browser = "firefox"
+	endif
+	silent exec '!"' . browser . '" "' . url . '"'
+	" silent exec requires redrawing vim
+	redraw!
 endfunction
 
 " --- digraphs ---
