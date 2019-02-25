@@ -248,20 +248,19 @@ endif
 endfunction
 
 " search online
-nmap <leader>s :call Duck("")<CR>
+nmap <leader>s :call Duck('')<CR>
 " instantly browse to first search result
-nmap <leader>l :call Duck("\\")<CR>
+nmap <leader>l :call Duck('\')<CR>
 function! Duck(prefix)
 	let keyword = expand("<cword>")
 	let url = "https://duckduckgo.com/?q=" . a:prefix . keyword
 	if g:os == "Windows"
-		let browser = "TODO add browser path"
-		let browser = "firefox"
+		let browser = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
 	elseif g:os == "Linux"
+		let browser = 'firefox'
 	endif
 	silent exec '!"' . browser . '" "' . url . '"'
-	" silent exec requires redrawing vim
-	redraw!
+	redraw! " silent exec requires redrawing vim
 endfunction
 
 " --- digraphs ---
