@@ -3,6 +3,12 @@ set encoding=utf-8
 
 set nocompatible
 
+if has("win64") || has("win32")
+	let g:os = "Windows"
+else
+	let g:os = substitute(system('uname'), '\n', '', '')
+endif
+
 let mapleader=","
 
 " be able to move up/down inside wrapped lines
@@ -12,7 +18,7 @@ map <down> g<down>
 map <C-K> :py3f ~/.vim/addons/syntax/clang-format.py<cr>
 imap <C-K> <c-o>:py3f ~/.vim/addons/syntax/clang-format.py<cr>
 
-if has("win32")
+if g:os == "Windows"
 	noremap <C-΄>  :tabprevious<cr>
 	" noremap <C-Îv> :tabnext<cr> " doesn't work
 	nnoremap tp    :tabprevious<CR>
@@ -24,12 +30,12 @@ nnoremap / /\v
 vnoremap / /\v
 
 " use more colors than just 16
-if !has("win32")
-	" set t_Co=256
+if g:os == "Linux"
+	set t_Co=256
 endif
 
 " vim and tmux need to be on the same page about terminal symbols
-if !has("win32")
+if g:os == "Linux"
 	set term=xterm-256color
 endif
 
@@ -98,10 +104,10 @@ endif
 "use listmode to make tabs visible and make them gray so they are not
 "disctrating too much
 set listchars=tab:»\ ,eol:¬,trail:.
-if has("win32") " cmder's theme is dark, so lightgray is bad
+if g:os == "Windows" " cmder's theme is dark, so lightgray is bad
 	highlight NonText ctermfg=darkgray guifg=darkgray
 	highlight SpecialKey ctermfg=darkgray guifg=darkgray
-elseif has("X11")
+elseif g:os == "Linux"
 	highlight NonText ctermfg=gray guifg=lightgray
 	highlight SpecialKey ctermfg=gray guifg=lightgray
 endif
@@ -248,10 +254,10 @@ nmap <leader>l :call Duck("\\")<CR>
 function! Duck(prefix)
 	let keyword = expand("<cword>")
 	let url = "https://duckduckgo.com/?q=" . a:prefix . keyword
-	if has("win32")
+	if g:os == "Windows"
 		let browser = "TODO add browser path"
-	elseif has("X11")
 		let browser = "firefox"
+	elseif g:os == "Linux"
 	endif
 	silent exec '!"' . browser . '" "' . url . '"'
 	" silent exec requires redrawing vim
