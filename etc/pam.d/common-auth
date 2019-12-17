@@ -15,7 +15,7 @@
 
 # here are the per-package modules (the "Primary" block)
 auth	required	pam_yubico.so mode=challenge-response
-auth	[success=1 default=ignore]	pam_unix.so nullok_secure try_first_pass
+auth	[success=1 default=ignore]	pam_unix.so nullok_secure
 # here's the fallback if no module succeeds
 auth	requisite			pam_deny.so
 # prime the stack with a positive return value if there isn't one already;
@@ -23,4 +23,5 @@ auth	requisite			pam_deny.so
 # since the modules above will each just jump around
 auth	required			pam_permit.so
 # and here are more per-package modules (the "Additional" block)
+auth	optional			pam_cap.so 
 # end of pam-auth-update config

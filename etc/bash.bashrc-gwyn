@@ -16,7 +16,10 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# but only if not SUDOing and have SUDO_PS1 set; then assume smart user.
+if ! [ -n "${SUDO_USER}" -a -n "${SUDO_PS1}" ]; then
+  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
 
 # Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
 # If this is an xterm set the title to user@host:dir
@@ -67,12 +70,12 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 
-export LS_OPTIONS="$LS_OPTIONS --color=auto --group-directories-first"
 export LESS="-RFX"
+export LS_OPTIONS="$LS_OPTIONS --color=auto --group-directories-first"
 
 alias ls='ls $LS_OPTIONS'
-alias ll='ls -l'
-alias l='ls -la'
+alias ll='ls -lF'
+alias l='ls -lF'
 
 alias ..="cd .."
 alias md="mkdir"
@@ -89,17 +92,6 @@ function add_app
 }
 
 add_app $HOME
-#add_app /opt/gasnet
-add_app /opt/hpctoolkit
-add_app /opt/llvm
-add_app /opt/nvml
-#add_app /opt/openshmem
-add_app /opt/papi
-add_app /opt/vampir
 add_app /usr/local
-
-export PATH="/opt/zotero:$PATH"
-
-export SC2PATH=/opt/starcraft2
 
 tabs 4
