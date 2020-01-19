@@ -264,6 +264,25 @@ function! Duck(prefix)
 	redraw! " silent exec requires redrawing vim
 endfunction
 
+" --- local vimrc ---
+let b:thisdir=expand("%:p:h")
+let b:vimmmmrc=b:thisdir."/../../../.vimrc"
+if (filereadable(b:vimmmmrc))
+    execute "source ".b:vimmmmrc
+endif
+let b:vimmmrc=b:thisdir."/../../.vimrc"
+if (filereadable(b:vimmmrc))
+    execute "source ".b:vimmmrc
+endif
+let b:vimmrc=b:thisdir."/../.vimrc"
+if (filereadable(b:vimmrc))
+    execute "source ".b:vimmrc
+endif
+let b:vimrc=b:thisdir."/.vimrc"
+if (filereadable(b:vimrc))
+    execute "source ".b:vimrc
+endif
+
 " --- digraphs ---
 "
 " insert mode + ctrl+k + key 1 + key 2
