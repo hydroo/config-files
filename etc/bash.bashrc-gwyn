@@ -83,15 +83,18 @@ alias md="mkdir"
 function add_app
 {
 	if [ -d "$1/bin"       ]; then export PATH="$1/bin:$PATH"            ; fi
+	if [ -d "$1/bin32"     ]; then export PATH="$1/bin32:$PATH"          ; fi
 	if [ -d "$1/bin64"     ]; then export PATH="$1/bin64:$PATH"          ; fi
 	if [ -d "$1/include"   ]; then export INCLUDE="$1/include:$INCLUDE"  ; fi
 	if [ -d "$1/lib"       ]; then export LD_LIBRARY_PATH="$1/lib:$LD_LIBRARY_PATH"  ; export LIBRARY_PATH="$1/lib:$LIBRARY_PATH"  ; fi
+	if [ -d "$1/lib32"     ]; then export LD_LIBRARY_PATH="$1/lib32:$LD_LIBRARY_PATH"; export LIBRARY_PATH="$1/lib32:$LIBRARY_PATH"; fi
 	if [ -d "$1/lib64"     ]; then export LD_LIBRARY_PATH="$1/lib64:$LD_LIBRARY_PATH"; export LIBRARY_PATH="$1/lib64:$LIBRARY_PATH"; fi
 	if [ -d "$1/man"       ]; then export MANPATH="$1/man:$MANPATH"      ; fi
 	if [ -d "$1/share/man" ]; then export MANPATH="$1/share/man:$MANPATH"; fi
 }
 
 add_app $HOME
+add_app /opt/intel/vtune_profiler
 add_app /usr/local
 
 tabs 4
