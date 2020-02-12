@@ -265,23 +265,17 @@ function! Duck(prefix)
 endfunction
 
 " --- local vimrc ---
-let b:thisdir=expand("%:p:h")
-let b:vimmmmrc=b:thisdir."/../../../.vimrc"
-if (filereadable(b:vimmmmrc))
-    execute "source ".b:vimmmmrc
-endif
-let b:vimmmrc=b:thisdir."/../../.vimrc"
-if (filereadable(b:vimmmrc))
-    execute "source ".b:vimmmrc
-endif
-let b:vimmrc=b:thisdir."/../.vimrc"
-if (filereadable(b:vimmrc))
-    execute "source ".b:vimmrc
-endif
-let b:vimrc=b:thisdir."/.vimrc"
-if (filereadable(b:vimrc))
-    execute "source ".b:vimrc
-endif
+let b:path=resolve(expand('%:p:h'))
+let b:home=resolve($HOME)
+
+while b:path != $HOME && b:path != '/'
+	" echo b:path
+	if (filereadable(b:path.'/.vimrc'))
+		" echo '  loaded'
+		execute 'source '.b:path.'/.vimrc'
+	endif
+	let b:path=fnamemodify(b:path, ':h')
+endwhile
 
 " --- digraphs ---
 "
