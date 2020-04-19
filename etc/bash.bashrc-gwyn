@@ -96,6 +96,7 @@ function add_app
 add_app $HOME
 add_app /opt/intel/vtune_profiler
 add_app /opt/godot/current
+add_app /opt/sfxr
 add_app /opt/unity/unityhub
 add_app /usr/local
 
