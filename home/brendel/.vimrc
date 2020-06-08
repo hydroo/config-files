@@ -200,7 +200,7 @@ except:
 vim.command("match RonnyWordUnderCursorHighlight //")
 
 # if the cursor is currently located on a real word, move on and highlight it
-if characterUnderCursor.isalpha() or characterUnderCursor.isdigit() or characterUnderCursor is '_':
+if characterUnderCursor.isalpha() or characterUnderCursor.isdigit() or characterUnderCursor == '_':
 
 	# expand cword to get the word under the cursor
 	wordUnderCursor = vim.eval("expand(\'<cword>\')")
