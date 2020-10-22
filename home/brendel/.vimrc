@@ -179,7 +179,11 @@ endif
 
 highlight Search ctermfg=white ctermbg=gray
 highlight IncSearch ctermfg=white ctermbg=gray
-highlight RonnyWordUnderCursorHighlight cterm=bold
+if g:os == "Windows"
+	highlight RonnyWordUnderCursorHighlight ctermbg=darkgray
+else
+	highlight RonnyWordUnderCursorHighlight cterm=bold
+endif
 
 " --- highlight the word under the cursor ---
 
