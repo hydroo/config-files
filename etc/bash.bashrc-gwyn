@@ -99,5 +99,6 @@ add_app /opt/godot/current
 add_app /opt/sfxr
 add_app /opt/unity/unityhub
 add_app /usr/local
+export PATH=/usr/local/NVIDIA-Nsight-Compute:$PATH
 
 tabs 4
