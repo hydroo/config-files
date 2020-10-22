@@ -266,14 +266,16 @@ endfunction
 
 " --- local vimrc ---
 let b:dir=resolve(expand('%:p:h'))
+let b:dirprev=b:dir
 let b:home=resolve($HOME)
 
-while b:dir != $HOME && b:dir != '/'
-	" echo b:dir
+while b:dir != $HOME && b:dir != '/' && b:dir != b:dirprev
+	echo b:dir
 	if (filereadable(b:dir.'/.vimrc'))
 		" echo '  loaded'
 		execute 'source '.b:dir.'/.vimrc'
 	endif
+	let b:dirprev=b:dir
 	let b:dir=fnamemodify(b:dir, ':h')
 endwhile
 
